@@ -16,13 +16,13 @@
 - Structured JSON  
 
 | Task                     | Gemma 3 (1B)          | Qwen 2.5 (3B)       | Notes                                      |
-|---------------------------|----------------------|--------------------|--------------------------------------------|
+|---------------------------|----------------------|---------------------|--------------------------------------------|
 | Short Summarisation       | ✅                    | ✅                  | Qwen slightly more detailed               |
 | Long summarisation        | ✅                    | ✅                  | Both okay, Qwen more coherent             |
 | Code explanation          | ✅ basic              | ✅ detailed         | Qwen explains better                       |
-| Code Refactor             | ✅ basic              | ✅ better + docstring | Qwen cleaner                             |
-| Harder code + unit tests  | ⚠️ Gemma struggles   | ✅ Qwen works perfectly | Shows coding strength                     |
-| JSON Extraction           | ✅                    | ✅                  | Both valid, Qwen slightly cleaner         |
+| Code Refactor             | ✅ basic              | ✅ better + docstring  | Qwen cleaner                            |
+| Harder code + unit tests  | ⚠️ Gemma struggles    | ✅ Qwen works perfectly | Shows coding strength                  |
+| JSON Extraction           | ✅                    | ✅                     | Both valid, Qwen slightly cleaner       |
 
 ---
 
@@ -42,6 +42,9 @@ Overall, this exercise helped me understand not only the models’ technical cap
 
 ## Conclusion
 
-In conclusion, this stage of the project successfully demonstrated my ability to install, run, and evaluate local LLMs on a personal machine. Gemma 3 (1B) proved to be an efficient, lightweight option for summarisation and simple structured outputs, while Qwen 2.5 (3B) excelled in coding-related tasks and complex reasoning.
+In conclusion, this stage of the project successfully demonstrated my ability to install, run, and evaluate local LLMs on a personal machine. 
+Gemma 3  proved to be an efficient, lightweight option for summarisation and simple structured outputs, while Qwen 2.5 excelled in coding-related tasks and complex reasoning.
 
-The comparative analysis highlighted that no single model is universally optimal; rather, the choice of model should align with task complexity and desired output quality. Running the same prompts across both models enabled a direct comparison of speed, accuracy, instruction-following, and reliability, providing valuable insights for future experiments.
+The comparative analysis highlighted that no single model is universally optimal; rather, the choice of model should align with task complexity and desired output quality. 
+Running the same prompts across both models enabled a direct comparison of speed, accuracy, instruction-following, and reliability, providing valuable insights for future experiments.
+
