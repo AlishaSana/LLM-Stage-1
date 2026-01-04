@@ -1,0 +1,47 @@
+
+**OS:** macOS  
+**Ollama version:** 0.13.5  
+
+---
+
+## Models Used
+- **Gemma 3 (1B)** – small  
+- **Qwen 2.5 (3B)** – larger  
+
+---
+
+## Experiments
+- Summarisation (short + longer text)  
+- Code help (explain, refactor, harder code)  
+- Structured JSON  
+
+| Task                     | Gemma 3 (1B)          | Qwen 2.5 (3B)       | Notes                                      |
+|---------------------------|----------------------|--------------------|--------------------------------------------|
+| Short Summarisation       | ✅                    | ✅                  | Qwen slightly more detailed               |
+| Long summarisation        | ✅                    | ✅                  | Both okay, Qwen more coherent             |
+| Code explanation          | ✅ basic              | ✅ detailed         | Qwen explains better                       |
+| Code Refactor             | ✅ basic              | ✅ better + docstring | Qwen cleaner                             |
+| Harder code + unit tests  | ⚠️ Gemma struggles   | ✅ Qwen works perfectly | Shows coding strength                     |
+| JSON Extraction           | ✅                    | ✅                  | Both valid, Qwen slightly cleaner         |
+
+---
+
+## Reflection
+
+During this stage of the project, I conducted a series of experiments using two local LLMs, Gemma 3 (1B) and Qwen 2.5 (3B), to evaluate their performance across tasks including summarisation, code explanation and refactoring, and structured JSON output. I deliberately used the same prompts for both models to ensure a fair comparison and to observe differences in output quality, detail, and instruction-following.
+
+I observed that Gemma 3 performed admirably on lightweight tasks, such as summarising short texts and generating basic JSON. Its responses were generally fast, coherent, and concise, making it well-suited for tasks requiring quick results with limited computational resources. However, when faced with more complex coding tasks, Gemma’s outputs were incomplete; for example, while it attempted to generate unit tests for the function `process_data`, it did not fully cover edge cases.
+
+In contrast, Qwen 2.5 demonstrated superior capability on more advanced tasks. Its explanations were more detailed and precise, refactored code was readable and well-documented with docstrings, and the unit tests included multiple edge cases such as empty lists, single elements, negative values, and large numbers. While it consumed slightly more resources and took longer to respond, the increased depth and accuracy of the outputs clearly justify its use for coding-heavy or structured tasks.
+
+Comparing outputs side by side allowed me to reflect on each model’s strengths and limitations. I noted patterns in hallucinations, minor formatting issues, and situations where a smaller model might skip details. This process also reinforced the importance of task-model alignment, where smaller models are ideal for summarisation or light prompting, and larger models are better suited for tasks requiring reasoning, structured output, or advanced code generation.
+
+Overall, this exercise helped me understand not only the models’ technical capabilities but also practical trade-offs, such as speed versus accuracy and resource efficiency versus output quality. It gave me confidence in designing prompt-based experiments and critically evaluating LLM responses in a reproducible and systematic manner.
+
+---
+
+## Conclusion
+
+In conclusion, this stage of the project successfully demonstrated my ability to install, run, and evaluate local LLMs on a personal machine. Gemma 3 (1B) proved to be an efficient, lightweight option for summarisation and simple structured outputs, while Qwen 2.5 (3B) excelled in coding-related tasks and complex reasoning.
+
+The comparative analysis highlighted that no single model is universally optimal; rather, the choice of model should align with task complexity and desired output quality. Running the same prompts across both models enabled a direct comparison of speed, accuracy, instruction-following, and reliability, providing valuable insights for future experiments.
